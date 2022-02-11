@@ -19,7 +19,18 @@ import java.nio.charset.StandardCharsets
 
 buildscript {
   repositories {
-    mavenCentral()
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/repository/gradle-plugin/' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
   }
   apply from: "$rootDir/gradle/dependencies.gradle"
 
@@ -54,7 +65,18 @@ spotless {
 allprojects {
 
   repositories {
-    mavenCentral()
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/repository/gradle-plugin/' }
+    maven {
+      allowInsecureProtocol = true
+      url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
   }
 
   dependencyUpdates {
